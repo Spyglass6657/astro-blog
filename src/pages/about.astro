@@ -1,5 +1,6 @@
 ---
 import NavBar from "../components/NavBar.astro";
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
 const pageTitle = "About Me";
@@ -22,24 +23,25 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-    <style define:vars={{ skillColor, fontWeight, textCase }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-      }
-    </style>
-  </head>
-  <body>
+<Layout title={pageTitle}>
+  <html lang="en">
+    <!-- <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>{pageTitle}</title>
+      <style define:vars={{ skillColor, fontWeight, textCase }}>
+        h1 {
+          color: purple;
+          font-size: 4rem;
+        }
+        .skill {
+          color: var(--skillColor);
+          font-weight: var(--fontWeight);
+          text-transform: var(--textCase);
+        }
+      </style>
+    </head>
+    <body> -->
     <NavBar />
     <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
@@ -85,5 +87,6 @@ const textCase = "uppercase";
         <p>My goal is not 3 days.</p>
       )
     }
-  </body>
-</html>
+    <!-- </body> -->
+  </html>
+</Layout>
