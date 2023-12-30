@@ -1,11 +1,11 @@
 ---
+import NavBar from "../components/NavBar.astro";
+import "../styles/global.css";
 const pageTitle = "Blog";
 ---
 
 <body>
-  <a class="anchor-tag" href="/">Home</a>
-  <a class="anchor-tag" href="/about/">About</a>
-  <a class="anchor-tag" href="/blog/">Blog</a>
+  <NavBar />
   <h1>{pageTitle}</h1>
   <h2>... will see where this goes.</h2>
 

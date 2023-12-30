@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import "../styles/global.css";
+import NavBar from "../components/NavBar.astro";
 const pageTitle = "Home Page";
 ---
 
@@ -34,9 +36,8 @@ const pageTitle = "Home Page";
         </linearGradient>
       </defs>
     </svg>
-    <a class="anchor-tag" href="/">Home</a>
-    <a class="anchor-tag" href="/about/">About</a>
-    <a class="anchor-tag" href="/blog/">Blog</a>
+
+    <NavBar />
 
     <h1 style="height: 80px" class="text-gradient">{pageTitle}</h1>
     <p class="instructions">
@@ -129,21 +130,5 @@ const pageTitle = "Home Page";
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 2rem;
     padding: 0;
-  }
-
-  a.anchor-tag {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-
-  a.anchor-tag:hover {
-    background-color: #0056b3;
   }
 </style>
