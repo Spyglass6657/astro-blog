@@ -1,14 +1,10 @@
 ---
-import NavBar from "../components/NavBar.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 const pageTitle = "Blog";
 ---
 
 <Layout title={pageTitle}>
-  <!-- <body> -->
-  <NavBar />
-  <h1 class="text-gradient">{pageTitle}</h1>
   <h2>... will see where this goes.</h2>
 
   <p>Lorem ipsum or something</p>
@@ -17,5 +13,4 @@ const pageTitle = "Blog";
     <li><a class="anchor-tag" href="/posts/post-2/">Post 2</a></li>
     <li><a class="anchor-tag" href="/posts/post-3/">Post 3</a></li>
   </ul>
-  <!-- </body> -->
 </Layout>

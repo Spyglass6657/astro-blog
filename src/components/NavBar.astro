@@ -1,6 +1,15 @@
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+---
+import Hamburger from "./Hamburger.astro";
+---
+
+<nav>
+  <Hamburger />
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+  </div>
+</nav>
 
 <style>
   a {
