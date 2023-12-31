@@ -1,5 +1,9 @@
 ---
 import Layout from "./Layout.astro";
+import type { Post } from "../common/Interfaces";
+interface Props {
+  frontmatter: Post;
+}
 const { frontmatter } = Astro.props;
 ---
 

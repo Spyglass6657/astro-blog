@@ -1,10 +1,12 @@
 ---
+import type { MarkdownInstance } from "astro";
 import Layout from "../../layouts/Layout.astro";
 import BlogPost from "../../components/BlogPost.astro";
+import type { Post } from "../../common/Interfaces";
 
-export async function getStaticPaths() {
-  const allPosts = await Astro.glob("../posts/*.md");
-  const uniqueTags = [
+export const getStaticPaths = async () => {
+  const allPosts: MarkdownInstance<Post>[] = await Astro.glob("../posts/*.md");
+  const uniqueTags: string[] = [
     ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
   ];
 
@@ -17,7 +19,7 @@ export async function getStaticPaths() {
       props: { posts: filteredPosts },
     };
   });
-}
+};
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
